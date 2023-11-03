@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="music.css">
+    <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+    <div class="musics-container">
+        <!-- Start of Html player for selected song -->
+        <div class="selectedMusicContainer">
+            <div class="image">
+                <img id = 'SongImage' src="covers/Bhula Dena.jpg" alt="">
+            </div>
+            <div class="player">
+                <div class="SongName">Emotion(Deluxe)</div>
+                <div class="MediaControls">
+                    <div class="prev-track" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>
+                    <div class="playpause-track" onclick="playPauseTrack()"><i class="fa fa-play-circle fa-5x"></i></div>
+                    <div class="next-track" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div>
+                </div>
+                <div class="ContainerToSeekSong">
+                    <div class="current-time">00:00</div>
+                    <input type="range" id="ToSeekSong" oninput ="SeekTo()" onmousedown="StopUpdateTimer()" onmouseup="RestartUpdateTimer()" min="0" max="100" value="0">
+                    <div class="total-duration">00:00</div>
+                </div>
+                <div class="ContainerForVolumeBar">
+                    <i class="fa fa-volume-down"></i>
+                    <input type="range" id="VolumeBar" min="0" max="100" value="99" oninput ="ChangeVolume()">
+                    <i class="fa fa-volume-up"></i>
+                </div>
+            </div>
+        </div>
+        <!-- End of Html player for selected song -->
+        <!-- Start of list of songs -->
+        <div class="songs-container" id="grow">
+            <div class='measuringWrapper'>
+                <!-- <div class="songs" data-songname="Warriyo">
+                    <div>
+                        <p id="songNumber">1</p>
+                        <p id="songName">Warriyo</p>
+                    </div>
+                    <div class="gif">
+                        <img src="gif/playing.gif" alt="">
+                    </div>
+                </div>  -->
+            </div>
+        </div>
+        <!-- End of list of songs -->
+    </div>
+    <div class="GetSongsList" data-clicked="false" onclick="ShowListOfSongs()">
+        <span>List Of Songs</span><i class="arrow down"></i>
+    </div>
+</body>
+<script src="music.js"></script>
+</html>

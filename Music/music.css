@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+
+/* start of style for selectedMusicContainer */
+.selectedMusicContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    gap: 0.6rem;
+    padding: .6rem;
+    background-color: rgb(53, 147, 209);
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* End of style for selectedMusicContainer */
+
+/* start of player style*/
+.player{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Media controls styles */
+.MediaControls{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.MediaControls > div > i{
+    opacity: .7;
+    transition: opacity .2s;
+}
+.MediaControls > div > i:hover{
+    opacity: 1;
+}
+
+/* Style of seek bars of song and volume */
+.ContainerToSeekSong{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+    font-size: small;
+}
+.ContainerForVolumeBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+} 
+/* Style to decide the length of sliders */
+#ToSeekSong{
+    width: 100%;
+}
+#VolumeBar{
+    width: 25%;
+}
+
+/* Modify the appearance of the slider */
+#ToSeekSong, #VolumeBar{
+    appearance: none;
+    height: 5px;
+    background: black;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+#ToSeekSong:hover, #VolumeBar:hover{
+   opacity: 1;
+}
+
+/* Modify the appearance of the slider thumb */
+#ToSeekSong::-webkit-slider-thumb,
+#VolumeBar::-webkit-slider-thumb {
+appearance: none;
+width: 15px;
+height: 15px;
+background-color: white;
+border-radius: 50%;
+cursor: pointer;
+}
+/* End of player style*/
+
+
+
+/* Start of list of songs style*/
+
+/* style for songs cntainer */
+.songs-container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(37, 37, 37);
+    color: white;
+}
+/* style for individual lines of songs*/
+.songs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: 50px;
+    cursor: pointer;
+}
+.songs:hover{
+    background-color: black;
+}
+
+/* To creating a gap between song number and song name */
+.songs > div > p:first-child{
+    padding-right: 1rem;
+}
+
+.songs > div{
+    display: flex;
+    
+}
+.gif {
+    width: 20%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+/* End of list of songs style*/
+
+
+/* Start of style for GetSongsList div container */
+.GetSongsList{
+    color: white;
+    background-color: rgb(58, 54, 54);
+    padding: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+.GetSongsList > span{
+    padding-right: 15px;
+}
+
+.GetSongsList:hover{
+    background-color: black;
+}
+
+/* For smooth increase and decrease in height */  
+#grow {
+    transition: height .9s ease;
+    height: 0;
+    overflow: hidden;
+  }
+/* For smooth increase and decrease in height */
+
+/* Start of style for arrow which is inside GetSongsList div container */
+.arrow {
+    border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 4px;
+}
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    vertical-align: -20%;
+    transition: transform .5s;
+}
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    vertical-align: text-top;
+    transition: transform .5s;
+  }
+/* End of style for arrow which is inside GetSongsList div container */
+
+/* End of style for GetSongsList div container */
+
+
+/* To style scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+    
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: black;
+    border-radius:20px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius:20px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

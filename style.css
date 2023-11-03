@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* START of Outer-container style */
+.outer-container {
+    background-color: rgb(85, 83, 83);
+    height: 43vh;
+    width: 300px;/* Recent changes */ 
+    border-radius: 70px; /* Recent changes */
+    /* border-radius: 4vw; */
+    display: flex;
+    align-items: center;
+}
+
+/* END of Outer-container style */
+
+/* START of inner-container style */
+.inner-container {
+    background-color: black;
+    height: 40vh;
+    width: 100%;
+    border-radius: 70px; /* Recent changes */
+    /* border-radius: 4vw; */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* END of inner-container style */
+
+/* START of header div style which is inside inner-container */
+.header {
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    font-size: large;
+}
+
+/* END of header div style which is inside inner-container */
+
+/* START of main div style which is inside inner-container */
+.main {
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+/* END of main div style which is inside inner-container */
+
+/* START of timer p tag style which is inside main div */
+#time {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+/* END of timer p tag style which is inside main div */
+
+/* START of day p tag style which is inside main div */
+#day {
+    font-weight: 300;
+}
+
+/* END of day p tag style which is inside main div */
+
+/* START of menu div style which is inside inner-container div */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 10vh;
+    border-radius: 0 0 4vw 4vw;
+    overflow: hidden;
+}
+
+.menu > div{
+    cursor: pointer;
+}
+
+/* END of menu div style which is inside inner-container div */
+
+/* START of img tag style */
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.hover:hover {
+    /* filter: invert(100%); */
+    opacity: 0.7;
+}
+
+.filter {
+    filter: invert(100%);
+}
+
+/* END of img tag style */
+
+/* START of iframe div style which is inside inner-container div */
+.iframe {
+    flex-grow: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+/* END of iframe div style which is inside inner-container div */
+
+/* START of iframe tag style */
+iframe {
+    border: none;
+    height: 90%;
+}
+
+/* END of iframe tag style */
