@@ -14,12 +14,11 @@ body {
 /* START of Outer-container style */
 .outer-container {
     background-color: rgb(85, 83, 83);
-    height: 43vh;
     width: 300px;/* Recent changes */ 
     border-radius: 70px; /* Recent changes */
-    /* border-radius: 4vw; */
     display: flex;
     align-items: center;
+    height: 400px;/* Recent changes */ 
 }
 
 /* END of Outer-container style */
@@ -27,15 +26,14 @@ body {
 /* START of inner-container style */
 .inner-container {
     background-color: black;
-    height: 40vh;
     width: 100%;
     border-radius: 70px; /* Recent changes */
-    /* border-radius: 4vw; */
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
     overflow: hidden;
+    height: 375px;/* Recent changes */ 
 }
 
 /* END of inner-container style */
@@ -82,8 +80,7 @@ body {
 .menu {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 10vh;
-    border-radius: 0 0 4vw 4vw;
+    grid-template-rows: 100%;
     overflow: hidden;
 }
 
